@@ -11,6 +11,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'racer-rust/vim-racer'
 
 call vundle#end()
 
@@ -26,3 +27,7 @@ set shiftwidth=4
 set expandtab
 
 set mouse=a
+
+set hidden
+let g:racer_cmd = "~/bin/racer"
+let $RUST_SRC_PATH="~/Downloads/rust-src/src"
