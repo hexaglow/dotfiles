@@ -1,3 +1,7 @@
+if [[ -a "$HOME/.profile" ]]; then
+	. "$HOME/.profile"
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh/
 
@@ -81,3 +85,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export NVM_DIR="/home/matt/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+[[ -s "/home/matt/.gvm/scripts/gvm" ]] && source "/home/matt/.gvm/scripts/gvm"
