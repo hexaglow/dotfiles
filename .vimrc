@@ -29,5 +29,5 @@ set expandtab
 set mouse=a
 
 set hidden
-let g:racer_cmd = "~/bin/racer"
-let $RUST_SRC_PATH="~/Downloads/rust-src/src"
+let g:racer_cmd = $HOME."/bin/racer"
+let $RUST_SRC_PATH= $HOME."/Downloads/rust-src/src"

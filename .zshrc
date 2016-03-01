@@ -11,6 +11,19 @@ export ZSH=~/.oh-my-zsh/
 # time that oh-my-zsh is loaded.
 ZSH_THEME="ys"
 
+function dockrun {
+  ID=$(docker run -d "$@")
+  docker ps | grep ${ID:0:8} | awk '{ print $NF }'
+}
+
+function dockattach {
+  docker attach --sig-proxy=false "$@"
+}
+
+function dockdestroy {
+  docker rm -f "$@"
+}
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
